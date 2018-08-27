@@ -22,8 +22,8 @@ export function createFilterControl(ymaps) {
   });
 
   listBoxControl.events.add(['select', 'deselect'], event => {
-    var item = event.get('target');
-    var filters = ymaps.util.extend({}, listBoxControl.state.get('filters'));
+    let item = event.get('target');
+    let filters = ymaps.util.extend({}, listBoxControl.state.get('filters'));
     filters[item.data.get('value')] = item.isSelected();
     listBoxControl.state.set('filters', filters);
   });

@@ -14,7 +14,5 @@ exports.initBackendStub = function(app) {
     const details = cache[id] || (cache[id] = generateDetails(info));
 
     res.json({ ...info, ...details });
-
-    return {};
   });
 };
